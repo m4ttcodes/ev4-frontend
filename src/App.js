@@ -6,6 +6,7 @@ import ListaUsuarios from "./usuarios/ListaUsuarios";
 import ListaGestion from "./gestion/ListaGestion";
 import ListaTipoGestion from "./tipo_gestion/ListaTipoGestion";
 import ListarResultado from "./resultado/ListaResultado";
+import CrearCliente from "./clientes/CrearCliente";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/usuarios" element={<ListaUsuarios/>} />
           <Route path="/clientes" element={<ListaClientes/>} />
+          <Route path="/clientes/agregar" element={<CrearCliente/>} />
           <Route path="/gestion" element={<ListaGestion/>} />
           <Route path="/tipo_gestion" element={<ListaTipoGestion/>} />
           <Route path="/resultado" element={<ListarResultado/>} />

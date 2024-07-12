@@ -17,7 +17,7 @@ function ListaGestion(){
 
     return(
         <div className="container">
-            <h1>Lista Gestión</h1>
+            <h1>Lista Gestión</h1>  
             <hr></hr>
             <table className="table">
                 <thead>

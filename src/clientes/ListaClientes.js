@@ -1,24 +1,26 @@
 import React ,{useEffect, useState} from "react";
 import axios from "axios"
 
+
 function ListaClientes(){
     const [clientes, setClientes] = useState([]);
     useEffect(() => {
         const fetchClientes = async () => {
             try {
-                const response = await axios.get('http://144.126.210.74:8080/api/cliente');
+                const response = await axios.get('http://144.126.210.74:8080/api/cliente?_size=500');
                 setClientes(response.data);
             } catch (error) {
                 console.log(error);
             }
-        };
-        fetchClientes();
+        }; 
+        fetchClientes(); 
     },[]);
 
     return(
         <div className="container">
             <h1>Lista Clientes</h1>
             <hr></hr>
+            <a href="/clientes/agregar" className="btn btn-primary">Agregar Cliente</a>
             <table className="table">
                 <thead>
                     <th>Rut</th>
